@@ -20,7 +20,7 @@ public class Wand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0) && (mana > 10)) {
+        if(Input.GetKeyDown(KeyCode.Mouse0) && (mana >= 10)) {
             var bullet = Instantiate(spellPrefab, spellSpawnPoint.position, spellSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().velocity = spellSpawnPoint.forward * spellSpeed;
             mana -= 10;
