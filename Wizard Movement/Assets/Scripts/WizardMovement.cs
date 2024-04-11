@@ -122,4 +122,17 @@ public class WizardMovement : MonoBehaviour
     private void ResetJump() {
         readyToJump = true;
     }
+
+    // INVENTORY SYSTEM - MADE BY CONNOR
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // Check if the collision involves the specific object you want
+        if (collision.gameObject.CompareTag("Loot"))
+        {
+            Debug.Log("loot function");
+        }
+    }
+
+    //
 }
